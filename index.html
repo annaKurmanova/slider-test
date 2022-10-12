@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/style.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <style>
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <!-- Swiper -->
+      <div class="swiper swiperMain">
+        <div class="swiper-wrapper">
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper__content flex-item">
+        </div>
+      </div>
+      </div>
+    </header>
+    <div class="popup-bg flex-item">
+      <div class="popup">
+        <div class="popup__header flex-item">
+          <p class="popup__title">BMW i8</p>
+          <div class="popup__close" id="popup-btn"><img src="./src/assets/img/close.svg"></div>
+        </div>
+        <div class="popup__content">
+          <span>Тут должно быть спасибо. Но это тестовое. Так что читайте про BMW</span>
+          <p> BMW Vision Efficient Dynamics, BMW i8 — автомобиль компании BMW. Концепт-кар был представлен в 2009 году,
+            первый серийный образец — на Франкфуртском автосалоне в сентябре 2013 года</p>
+          <p> BMW Vision Efficient Dynamics представляет собой полноприводное двухдверное купе. Шасси и подвеска сделаны
+            из алюминия, крыша и двери выполнены из поликарбоната. Коэффициент аэродинамического сопротивления 0,26.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./src/assets/js/script.js"></script>
+  </body>
+
+</html>

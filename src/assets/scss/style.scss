@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "noir-pro-light";
+  src: url("../fonts/noir-pro-light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "NoirPro-BoldItalic";
+  src: url("../fonts/NoirPro-BoldItalic.ttf") format("truetype");
+}
+
+:root {
+  --font-main: "noir-pro-light", sans-serif;
+  --font-secondary: "NoirPro-BoldItalic", sans-serif;
+  --text-color: #393939;
+  --secondary-text-color: #727272;
+}
+
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+}
+
+img {
+  max-width: 100%;
+}
+
+.flex-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+}
+
+.slide {
+  &__header {
+    padding: 15px 64px 0 64px;
+    position: absolute;
+    width: inherit;
+  }
+  &__inner {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    h1 {
+      font-size: 32px;
+      letter-spacing: -0.05em;
+      text-transform: uppercase;
+      font-family: var(--font-secondary);
+      @media screen and (min-width: 1440px) {
+        font-size: 132px;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &__line {
+    padding-bottom: 20px;
+    width: 100%;
+    height: 100%;
+    @media screen and (min-width: 1440px) {
+      padding-bottom: 37px;
+    }
+  }
+  &__logo {
+    img {
+      width: 60px;
+      height: 60px;
+      opacity: 0.9;
+    }
+  }
+  &__info {
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+    cursor: pointer;
+  }
+  &__footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+  &__count {
+    flex-direction: column;
+    p {
+      font-family: var(--font-secondary);
+      font-size: 32px;
+      line-height: 38px;
+      letter-spacing: -0.05em;
+      color: var(--secondary-text-color);
+      font-weight: 900;
+    }
+
+    span {
+      font-size: 32px;
+      line-height: 38px;
+      letter-spacing: -0.05em;
+      color: #f36a1d;
+      font-weight: 900;
+    }
+  }
+
+  &__social {
+    position: absolute;
+    bottom: 0;
+    flex-direction: column;
+    right: 20px;
+    @media screen and (min-width: 1140px) {
+      right: 64px;
+      flex-direction: row;
+    }
+    img {
+      max-width: 15px;
+    }
+  }
+}
+
+.slide__like,
+.slide__logo {
+  max-width: 50px;
+}
+// popup
+.popup-bg {
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  display: none;
+  &.active {
+    display: flex;
+  }
+}
+.popup {
+  width: 100%;
+  height: auto;
+  padding: 16px;
+  background: #393939;
+  z-index: 888;
+  @media screen and (min-width: 768px) {
+    width: 543px;
+    height: auto;
+  }
+  &__header {
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 14px;
+  }
+  &__title {
+    font-family: var(--font-secondary);
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -0.05em;
+    color: var(--secondary-text-color);
+    font-weight: 900;
+  }
+  &__close {
+    height: 26px;
+    width: 26px;
+    cursor: pointer;
+  }
+  &__content {
+    color: #fff;
+    font-family: var(--font-main);
+    font-size: 20px;
+    span {
+      color: var(--secondary-text-color);
+      padding-bottom: 28px;
+    }
+    p {
+      margin-top: 25px;
+    }
+  }
+}
+
+.swiper-button-next {
+  background: url("/src/assets/img/arr-or-right.svg") no-repeat;
+  background-position: center;
+  color: transparent !important;
+  width: 58px !important;
+
+  @media screen and (min-width: 768px) {
+    background: url("/src/assets/img/arrow.svg") no-repeat;
+    width: 150px !important;
+  }
+}
+
+.swiper-button-prev {
+  background: url("/src/assets/img/arr-or-left.svg") no-repeat;
+  width: 58px !important;
+  background-position: center;
+  color: transparent !important;
+  @media screen and (min-width: 768px) {
+    width: 150px !important;
+    background: url("/src/assets/img/arrow-rgt.svg") no-repeat;
+  }
+}
